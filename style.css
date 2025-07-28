@@ -1,3 +1,11 @@
+/* estilo global */
+
+
+body {
+  margin: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Estilo da scrollbar para navegadores WebKit (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
   width: 12px;               /* largura da barra vertical */
@@ -19,10 +27,8 @@
   background-color: #000000;    /* cor ao passar o mouse */
 }
 
-body {
-  margin: 90px;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+/* header e navegação */
 
 .topnav {
   overflow: hidden;
@@ -97,6 +103,9 @@ body {
   }
 }
 
+
+/*  Conteúdo Principal e Layout */
+
 .conteudo {
   display: flex;
   align-items: flex-start; /* Alinha os dois blocos pelo topo */
@@ -163,7 +172,7 @@ body {
   }
 }
 
-/* Estilo para o endereço abaixo do mapa */
+/* Estilo para o endereço do mapa "como chegar" */
 #myAddressMap {
   font-size: 18px;        
   color: #333;            
@@ -172,13 +181,14 @@ body {
   margin: 20px;           
 }
 
-/* Em telas pequenas, centraliza o texto */
+/* Em telas pequenas, centraliza o texto do endereço*/
 @media screen and (max-width: 600px) {
   #addressMapa {
     text-align: center;
   }
 }
 
+/* formulário de reserva */
 .reserva {
   max-width: 800px;         /* largura máxima em telas grandes */
   width: 90%;               /* ocupa até 90% da largura da tela */
@@ -201,8 +211,7 @@ body {
   }
 }
 
-
-
+/* botões da página de reserva */
 .botoes {
   display: flex;
   flex-direction: column;  /* coloca os itens em coluna */
@@ -346,4 +355,15 @@ body {
 
 .social-icons a:hover {
   color: #555;            /* cor ao passar o mouse */
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #ffffff;
+}
+
+.back-to-top {
+  color: #999;
+  text-decoration: none;
 }
