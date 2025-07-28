@@ -136,7 +136,7 @@ body {
   max-width: 1000px;       
   box-sizing: border-box;  
   margin-top: -150px;
-  margin-left: 100px;
+  margin-left: 0px;
 }
 
 .grid-fotos img {
@@ -293,4 +293,57 @@ body {
 
 .form-container button:hover {
   background-color: #555;
+}
+
+/* Ajuste responsivo das fotos para telas menores */
+@media screen and (max-width: 768px) {
+  .grid-fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* espaço entre as imagens */
+    margin-left: 0; /* remove aquela margem grande no mobile */
+    margin-top: 0;  /* ajusta para não ficar sobreposto */
+    width: 100%;    /* ocupa toda a largura disponível */
+  }
+
+  .grid-fotos img {
+    width: 90%;     /* ocupa quase toda a largura da tela */
+    height: auto;   /* mantém proporção */
+    min-width: unset; /* remove o min-width fixo */
+  }
+
+  .address {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px auto;
+    white-space: normal; /* permite quebrar linha */
+  }
+
+  .conteudo {
+    flex-direction: column;
+    align-items: center; /* centraliza os itens no mobile */
+    gap: 20px;
+  }
+
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #000;            /* cor inicial do ícone */
+  font-size: 24px;        /* tamanho do ícone */
+  margin-right: 10px;     /* espaçamento entre ícones */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-left: 10px;
+}
+
+.social-icons a:hover {
+  color: #555;            /* cor ao passar o mouse */
 }
