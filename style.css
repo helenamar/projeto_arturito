@@ -1,3 +1,24 @@
+/* Estilo da scrollbar para navegadores WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 12px;               /* largura da barra vertical */
+  height: 12px;              /* altura da barra horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;       /* fundo da barra */
+  border-radius: 10px;       /* cantos arredondados do track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #959697;    /* cor da “pegada” */
+  border-radius: 10px;       /* cantos arredondados do thumb */
+  border: 3px solid #f0f0f0; /* borda para criar efeito de “moldura” */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000000;    /* cor ao passar o mouse */
+}
+
 body {
   margin: 90px;
   font-family: Arial, Helvetica, sans-serif;
@@ -12,7 +33,7 @@ body {
   width: 160px;
   height: auto;
   margin-left: 110px; 
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
   }
 
@@ -22,16 +43,16 @@ body {
   color: #000000;
   padding: 10px 1px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0px;
 }
 
 /* margens só em telas grandes */
 @media screen and (min-width: 601px) {
   .topnav a {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 100px;
+    margin-left: 8px;
+    margin-right: 10px;
+    margin-bottom: 50px;
   }
 }
 
@@ -85,35 +106,47 @@ body {
 
 .address {
   font-family: 'Libre Baskerville', serif;
-  font-size: 40px;
+  font-size: 35px;
   color: #000;
   line-height: 1.4;
-  margin-top: 200px; /* espaçamento do menu */
+  margin-top: 500px; 
   margin: 0;
-  margin-left: 80px; /* só desloca um pouco para a direita */
-  width: fit-content; /* largura do conteúdo */
+  margin-left: 80px;
+  width: fit-content; 
   white-space: nowrap;
 }
 
+@media (max-width: 600px) {
+
+  #address {
+    font-size: 18px; /* mantém o tamanho ou ajusta se quiser */
+    text-align: center; /* centraliza o texto */
+    margin: 0 auto; /* centraliza a div horizontalmente se ela tiver largura menor que o container */
+    display: block; /* garante que seja bloco */
+    white-space: nowrap; /* mantém na horizontal */
+  }}
+
+
 .grid-fotos {
-  margin: 20px auto;       /* centraliza e dá espaço vertical */
+  margin: 20px auto;     
   display: grid;
-  grid-template-columns: repeat(3, 1fr);/* colunas responsivas */
-  gap: 15px;               /* espaçamento entre as fotos */
-  width: 90%;              /* ocupa até 90% da largura da tela */
-  max-width: 1000px;       /* limite máximo para o grid */
-  box-sizing: border-box;  /* considera padding e borda no tamanho */
-  margin-top: -200px;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px;              
+  width: 90%;             
+  max-width: 1000px;       
+  box-sizing: border-box;  
+  margin-top: -150px;
   margin-left: 100px;
 }
 
 .grid-fotos img {
-  width: 100%;             /* imagem ocupa todo o espaço da célula */
+  width: 100%;  
   border-radius: 8px;
-  object-fit: cover;       /* mantém proporção cortando se necessário */
-  display: block;          /* evita espaços extras abaixo da imagem */
-  border: 2px solid #ccc;  /* borda visível para destacar a imagem */
+  object-fit: cover;      
+  display: block;          
+  border: 2px solid #ccc;  
   height: 400px; 
+  min-width: 220px;
 }
 
 @media screen and (max-width: 900px) {
@@ -122,15 +155,142 @@ body {
     gap: 20px; /* diminui o espaço entre eles */
   }
 
-  .address {
-    margin: 0; /* tira margens extras */
-    text-align: center; /* opcional: centraliza o texto */
-    white-space: normal; /* permite quebrar linha */
-  }
-
+  
   .grid-fotos {
     margin: 0 auto; /* centraliza o grid na coluna */
     width: 90%; /* ocupa até 90% da largura da tela */
     max-width: 1000px;
   }
+}
+
+/* Estilo para o endereço abaixo do mapa */
+#myAddressMap {
+  font-size: 18px;        
+  color: #333;            
+  text-align: left;  
+  margin-top: 10px;       
+  margin: 20px;           
+}
+
+/* Em telas pequenas, centraliza o texto */
+@media screen and (max-width: 600px) {
+  #addressMapa {
+    text-align: center;
+  }
+}
+
+.reserva {
+  max-width: 800px;         /* largura máxima em telas grandes */
+  width: 90%;               /* ocupa até 90% da largura da tela */
+  margin: 20px auto;        /* centraliza a div em si na tela */
+  font-size: 18px;
+  color: #333;
+  text-align: left;         /* texto alinhado à esquerda por padrão */
+  line-height: 1.5;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: -10px;
+}
+
+/* Em telas menores, centraliza o texto */
+@media screen and (max-width: 600px) {
+  .reserva {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+
+
+.botoes {
+  display: flex;
+  flex-direction: column;  /* coloca os itens em coluna */
+  gap: 20px;               /* espaço entre os botões */
+  align-items: center;     /* centraliza horizontalmente */
+  margin: 50px 0;       /* espaço acima e abaixo */
+ 
+}
+
+.btn-custom {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  width: 200px;             /* largura fixa opcional, para os botões ficarem do mesmo tamanho */
+  text-align: center;       /* centraliza o texto dentro do botão */
+}
+
+.btn-custom:hover {
+  background-color: #333;
+  color: #fff;
+
+}
+
+
+.form-container {
+  max-width: 500px;
+  width: 90%;
+  margin: -20px 0;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* borda cinza clara */
+  border-radius: 4px;
+  font-family:'Times new roman';
+  box-sizing: border-box;
+  background-color: #ffffff; /* fundo branco */
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Campos com largura menor */
+.form-container input,
+.form-container textarea {
+  width: 70%; /* largura menor */
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.5); /* borda cinza clara */
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 13px;
+  background-color: #fff;
+  color: #000;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: rgba(0, 123, 255, 0.8);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-container button {
+   display: block;         /* ocupa linha inteira, força ficar embaixo */
+  margin: 20px 0 0 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #555;
+}
+
+
+.form-container button:hover {
+  background-color: #555;
 }

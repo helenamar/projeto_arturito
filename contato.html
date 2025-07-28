@@ -33,26 +33,21 @@
 </div>
   </div>
 
-  <div class="conteudo">
-    <div class="address" id="myAddress">
-      <b>Arturito</b><br>
-      Rua Chabad, 124 <br>
-      Jardim Paulista<br>
-      (11) 2780-0485
-    </div>
+  <div class="form-container">
+  <form action="enviar.php" method="post">
+    <label for="nome">nome*</label>
+    <input type="text" id="nome" name="nome" required>
 
-    <div class="grid-fotos">
-      <img src="imagens/arturito 5.jpg" alt="Foto 5">
-      <img src="imagens/arturito 4.jpg" alt="Foto 4">
-      <img src="imagens/arturito 6.png" alt="Foto 6">
-      <img src="imagens/arturito1.jpg" alt="Foto 1">
-      <img src="imagens/arturito 2.jpg" alt="Foto 2">
-      <img src="imagens/arturito 3.jpg" alt="Foto 3">
-      
-      
-    </div>
-  </div>
+    <label for="email">e-mail*</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mensagem">mensagem* </label>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
 </div>
+
 
 <script src="javascript.js"></script>
 </body>
