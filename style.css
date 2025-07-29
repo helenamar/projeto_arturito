@@ -8,7 +8,7 @@ body {
 
 /* Estilo da scrollbar para navegadores WebKit (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 12px;               /* largura da barra vertical */
+  width: 12px;            
   height: 12px;              /* altura da barra horizontal */
 }
 
@@ -311,7 +311,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px; /* espaço entre as imagens */
-    margin-left: 0; /* remove aquela margem grande no mobile */
+    margin-left: 0; /* remove margemm grande no mobile */
     margin-top: 0;  /* ajusta para não ficar sobreposto */
     width: 100%;    /* ocupa toda a largura disponível */
   }
@@ -354,7 +354,7 @@ body {
 }
 
 .social-icons a:hover {
-  color: #555;            /* cor ao passar o mouse */
+  color: #555;           
 }
 
 footer {
