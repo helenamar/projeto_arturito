@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>arturito</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+
+  <div class="page">
+
+    <div class="sidebar">
+      <img src="/src/assets/images/logoarturito.png" alt="arturito" class="logo" />
+      <div class="topnav" id="myTopnav">
+        <a href="/" class="active">INICIO</a>
+        <a href="/reservas">RESERVAS</a>
+        <a href="/contato">CONTATO</a>
+        <a href="/mapa">COMO CHEGAR</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="conteudo">
+      <div id="mini-map" style="margin-top: 10px;"></div>
+
+      <div class="containerMap">
+        <div class="addressMap" id="myAddressMap">
+          <b>Arturito</b><br />
+          Rua Chabad, 124 <br />
+          Jardim Paulista<br />
+          (11) 2780-0485
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/src/js/javascript.js"></script>
+  <script src="/src/js/mapa.js"></script>
+</body>
+</html>

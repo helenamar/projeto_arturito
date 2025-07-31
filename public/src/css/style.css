@@ -1,0 +1,375 @@
+/* estilo global */
+
+
+body {
+  margin: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo da scrollbar para navegadores WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 12px;            
+  height: 12px;            
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;      
+  border-radius: 10px;     
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #959697;    
+  border-radius: 10px;   
+  border: 3px solid #f0f0f0; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000000;    
+}
+
+
+/* header e navegação */
+
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+  margin-left: 110px; 
+  margin-top: 10px;
+  margin-bottom: 20px;
+  }
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  padding: 10px 1px;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0px;
+}
+
+@media screen and (min-width: 601px) {
+  .topnav a {
+    margin-left: 8px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+  }
+}
+
+.topnav a:hover {
+  background-color: #ffffff;
+  color: rgb(110, 107, 107);
+}
+
+.topnav a.active {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+    display: block;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+/*  Conteúdo Principal e Layout */
+
+.conteudo {
+  display: flex;
+  align-items: flex-start; 
+  gap: 40px;
+  margin: 0;
+
+}
+
+.address {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 35px;
+  color: #000;
+  line-height: 1.4;
+  margin-top: 500px; 
+  margin: 0;
+  margin-left: 80px;
+  width: fit-content; 
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+
+  #address {
+    font-size: 18px; 
+    text-align: center;
+    margin: 0 auto; 
+    display: block; 
+    white-space: nowrap;
+  }}
+
+
+.grid-fotos {
+  margin: 20px auto;     
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px;              
+  width: 90%;             
+  max-width: 1000px;       
+  box-sizing: border-box;  
+  margin-top: -150px;
+  margin-left: 0px;
+}
+
+.grid-fotos img {
+  width: 100%;  
+  border-radius: 8px;
+  object-fit: cover;      
+  display: block;          
+  border: 2px solid #ccc;  
+  height: 400px; 
+  min-width: 220px;
+}
+
+@media screen and (max-width: 900px) {
+  .conteudo {
+    flex-direction: column; 
+    gap: 20px;
+  }
+
+  
+  .grid-fotos {
+    margin: 0 auto; 
+    width: 90%; 
+    max-width: 1000px;
+  }
+}
+
+/* Estilo para o endereço do mapa "como chegar" */
+#myAddressMap {
+  font-size: 18px;        
+  color: #333;            
+  text-align: left;  
+  margin-top: 10px;       
+  margin: 20px;           
+}
+
+/* Em telas pequenas, centraliza o texto do endereço*/
+@media screen and (max-width: 600px) {
+  #addressMapa {
+    text-align: center;
+  }
+}
+
+/* texto reservas */
+.reserva {
+  max-width: 800px;         /* largura máxima em telas grandes */
+  width: 90%;               /* ocupa até 90% da largura da tela */
+  margin: 20px auto;        /* centraliza a div em si na tela */
+  font-size: 18px;
+  color: #333;
+  text-align: left;         /* texto alinhado à esquerda por padrão */
+  line-height: 1.5;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: -10px;
+}
+
+/* Em telas menores, centraliza o texto */
+@media screen and (max-width: 600px) {
+  .reserva {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+/* botões da página de reserva */
+.botoes {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;          
+  align-items: center;  
+  margin: 50px 0;     
+ 
+}
+
+.btn-custom {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  width: 200px;        
+  text-align: center;     
+}
+
+.btn-custom:hover {
+  background-color: #333;
+  color: #fff;
+
+}
+
+/* formulário de contatos*/
+
+.form-container {
+  max-width: 500px;
+  width: 90%;
+  margin: -20px 0;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  font-family:'Times new roman';
+  box-sizing: border-box;
+  background-color: #ffffff; 
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Campos com largura menor */
+.form-container input,
+.form-container textarea {
+  width: 70%; 
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.5); 
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 13px;
+  background-color: #fff;
+  color: #000;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: rgba(0, 123, 255, 0.8);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* botão de enviar */
+.form-container button {
+   display: block;   
+  margin: 20px 0 0 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  border: none; 
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #555;
+}
+
+
+.form-container button:hover {
+  background-color: #555;
+}
+
+/* Ajuste responsivo para telas menores */
+@media screen and (max-width: 768px) {
+  .grid-fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* espaço entre as imagens */
+    margin-left: 0; /* remove margemm grande no mobile */
+    margin-top: 0;  /* ajusta para não ficar sobreposto */
+    width: 100%;    /* ocupa toda a largura disponível */
+  }
+
+  .grid-fotos img {
+    width: 90%;     /* ocupa quase toda a largura da tela */
+    height: auto;   /* mantém proporção */
+    min-width: unset; /* remove o min-width fixo */
+  }
+
+  .address {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px auto;
+    white-space: normal; /* permite quebrar linha */
+  }
+
+  .conteudo {
+    flex-direction: column;
+    align-items: center; /* centraliza os itens no mobile */
+    gap: 20px;
+  }
+
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}.social-icons {
+  margin-top: 10px;
+}
+
+/* ícone redes sociais */
+
+.social-icons a {
+  color: #000;            /* cor inicial do ícone */
+  font-size: 24px;        /* tamanho do ícone */
+  margin-right: 10px;     /* espaçamento entre ícones */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-left: 10px;
+}
+
+.social-icons a:hover {
+  color: #555;           
+}
+
+/* back to top */
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #ffffff;
+}
+
+.back-to-top {
+  color: #999;
+  text-decoration: none;
+}
