@@ -310,7 +310,7 @@ body {
 @media screen and (max-width: 768px) {
   .grid-fotos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 20px; /* espaço entre as imagens */
     margin-left: 0; /* remove margemm grande no mobile */
