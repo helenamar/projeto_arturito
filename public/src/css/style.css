@@ -309,19 +309,19 @@ body {
 /* Ajuste responsivo para telas menores */
 @media screen and (max-width: 768px) {
   .grid-fotos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px; /* espaço entre as imagens */
     margin-left: 0; /* remove margemm grande no mobile */
     margin-top: 0;  /* ajusta para não ficar sobreposto */
     width: 100%;    /* ocupa toda a largura disponível */
   }
 
-  .grid-fotos img {
-    width: 90%;     /* ocupa quase toda a largura da tela */
-    height: auto;   /* mantém proporção */
-    min-width: unset; /* remove o min-width fixo */
+    .grid-fotos img {
+      width: 90%;     /* ocupa quase toda a largura da tela */
+      height: auto;   /* mantém proporção */
+      min-width: unset; /* remove o min-width fixo */
+    }
   }
 
   .address {
@@ -342,7 +342,8 @@ body {
     margin-right: auto;
     display: block;
   }
-}.social-icons {
+  
+.social-icons {
   margin-top: 10px;
 }
 
