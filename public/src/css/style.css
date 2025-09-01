@@ -2,11 +2,11 @@
 
 
 body {
-  margin: 90px;
+  margin: 90px; /* em telas grandes */
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Estilo da scrollbar para navegadores WebKit (Chrome, Edge, Safari) */
+/* scrollbar para navegadores do WebKit (Chrome, Edge, Safari) customizado */
 ::-webkit-scrollbar {
   width: 12px;            
   height: 12px;            
@@ -28,13 +28,14 @@ body {
 }
 
 
-/* header e navegação */
+/* header e navegação menu em telas maiores*/
 
 .topnav {
-  overflow: hidden;
+  overflow: hidden; /* Esconde conteúdo que ultrapassa o limite */
   background-color: #ffffff;
 }
 
+/*logo centralizado em telas maiores */
 .logo {
   width: 160px;
   height: auto;
@@ -43,6 +44,8 @@ body {
   margin-bottom: 20px;
   }
 
+  
+/* links do menu */
 .topnav a {
   float: left;
   display: block;
@@ -52,7 +55,7 @@ body {
   font-size: 16px;
   letter-spacing: 0px;
 }
-
+/* espaçamento extra em telas maiores */
 @media screen and (min-width: 601px) {
   .topnav a {
     margin-left: 8px;
@@ -61,6 +64,7 @@ body {
   }
 }
 
+/* Hover para ativo */
 .topnav a:hover {
   background-color: #ffffff;
   color: rgb(110, 107, 107);
@@ -75,6 +79,7 @@ body {
   display: none;
 }
 
+/* Menu responsivo: esconde links e mostra ícone */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
@@ -103,7 +108,22 @@ body {
 }
 
 
-/*  Conteúdo Principal e Layout */
+/* ícone redes sociais */
+
+.social-icons a {
+  color: #000;            /* cor inicial do ícone */
+  font-size: 24px;        /* tamanho do ícone */
+  margin-right: 10px;     /* espaçamento entre ícones */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-left: 10px;
+}
+
+.social-icons a:hover {
+  color: #555;           
+}
+
+/* Estilo para o conteúdo da home */
 
 .conteudo {
   display: flex;
@@ -113,6 +133,7 @@ body {
 
 }
 
+/*  endereço estilizado */
 .address {
   font-family: 'Libre Baskerville', serif;
   font-size: 35px;
@@ -125,6 +146,7 @@ body {
   white-space: nowrap;
 }
 
+/* Responsividade para endereço */
 @media (max-width: 600px) {
 
   #address {
@@ -135,43 +157,6 @@ body {
     white-space: nowrap;
   }}
 
-
-.grid-fotos {
-  margin: 20px auto;     
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 15px;              
-  width: 90%;             
-  max-width: 1000px;       
-  box-sizing: border-box;  
-  margin-top: -150px;
-  margin-left: 0px;
-}
-
-.grid-fotos img {
-  width: 100%;  
-  border-radius: 8px;
-  object-fit: cover;      
-  display: block;          
-  border: 2px solid #ccc;  
-  height: 400px; 
-  min-width: 220px;
-}
-
-@media screen and (max-width: 900px) {
-  .conteudo {
-    flex-direction: column; 
-    gap: 20px;
-  }
-
-  
-  .grid-fotos {
-    margin: 0 auto; 
-    width: 90%; 
-    max-width: 1000px;
-  }
-}
-
 /* Estilo para o endereço do mapa "como chegar" */
 #myAddressMap {
   font-size: 18px;        
@@ -181,7 +166,7 @@ body {
   margin: 20px;           
 }
 
-/* Em telas pequenas, centraliza o texto do endereço*/
+/* Centraliza texto do mapa em telas pequenas*/
 @media screen and (max-width: 600px) {
   #addressMapa {
     text-align: center;
@@ -190,12 +175,12 @@ body {
 
 /* texto reservas */
 .reserva {
-  max-width: 800px;         /* largura máxima em telas grandes */
-  width: 90%;               /* ocupa até 90% da largura da tela */
-  margin: 20px auto;        /* centraliza a div em si na tela */
+  max-width: 800px; /* largura máxima em telas grandes */
+  width: 90%; /* ocupa até 90% da largura da tela */
+  margin: 20px auto; /* centraliza a div em si na tela */
   font-size: 18px;
   color: #333;
-  text-align: left;         /* texto alinhado à esquerda por padrão */
+  text-align: left; /* texto alinhado à esquerda por padrão */
   line-height: 1.5;
   padding: 10px;
   box-sizing: border-box;
@@ -203,7 +188,7 @@ body {
   margin-top: -10px;
 }
 
-/* Em telas menores, centraliza o texto */
+/* Centraliza texto da reserva em telas pequenas*/
 @media screen and (max-width: 600px) {
   .reserva {
     text-align: center;
@@ -262,7 +247,7 @@ body {
   color: #000000;
 }
 
-/* Campos com largura menor */
+/* Campos de formulário com largura reduzida e foco destacado */
 .form-container input,
 .form-container textarea {
   width: 70%; 
@@ -275,7 +260,7 @@ body {
   background-color: #fff;
   color: #000;
 }
-
+/* borda do formulário fica azul quando clicado */
 .form-container input:focus,
 .form-container textarea:focus {
   border-color: rgba(0, 123, 255, 0.8);
@@ -301,17 +286,48 @@ body {
   background-color: #555;
 }
 
+/*estilo para a grade de fotos desktop */
 
-.form-container button:hover {
-  background-color: #555;
+.grid-fotos {
+  margin: 20px auto;     
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*grid flexível */
+  gap: 15px;              
+  width: 90%;             
+  max-width: 1000px;       
+  box-sizing: border-box;  
+  margin-top: -150px;
+  margin-left: 0px;
 }
 
-/* Ajuste responsivo para telas menores */
+.grid-fotos img {
+  width: 100%;  
+  border-radius: 8px;
+  object-fit: cover;      
+  display: block;          
+  border: 2px solid #ccc;  
+  height: 400px; 
+  min-width: 220px;
+}
+/* Responsividade para telas médias */
+@media screen and (max-width: 900px) {
+  .conteudo {
+    flex-direction: column; 
+    gap: 20px;
+  }
+ 
+  .grid-fotos {
+    margin: 0 auto; 
+    width: 90%; 
+    max-width: 1000px;
+  }
+}
+
+/* Ajuste responsivo de imagens para telas menores */
 @media screen and (max-width: 768px) {
   .grid-fotos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas de fotos no mobile */
     gap: 20px; /* espaço entre as imagens */
     margin-left: 0; /* remove margemm grande no mobile */
     margin-top: 0;  /* ajusta para não ficar sobreposto */
@@ -319,57 +335,57 @@ body {
   }
 
   .grid-fotos img {
-    width: 90%;     /* ocupa quase toda a largura da tela */
-    height: auto;   /* mantém proporção */
-    min-width: unset; /* remove o min-width fixo */
+    width: 100%;   /* ocupa quase toda a largura da tela */
+    height: 200px;   /* mantém proporção */
+    object-fit: cover; /* Garante que a imagem cubra toda a área */
+    min-width: 0; /* remove o min-width fixo */
+    display: block; /* Garante que a imagem seja exibida como bloco */ 
+    
   }
 
+   /* Estilo para o endereço exibido na página */
   .address {
-    font-size: 20px;
-    text-align: center;
-    margin: 20px auto;
+    font-size: 20px;  /* Tamanho da fonte do endereço */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px auto; /* Espaçamento acima/abaixo e centralização horizontal */
     white-space: normal; /* permite quebrar linha */
   }
 
+   /* Ajuste do layout do conteúdo principal em telas menores */
   .conteudo {
-    flex-direction: column;
-    align-items: center; /* centraliza os itens no mobile */
-    gap: 20px;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* centraliza os itens horizontalmente no mobile */
+    gap: 20px; /* Espaço entre os elementos */
   }
 
+    /* logo centralizado em telas menores */
   .logo {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    margin-left: auto; /* Centraliza à esquerda */
+    margin-right: auto; /* Centraliza à direita */
+    display: block; /* Garante que o logo seja exibido como bloco */
   }
+
+  /* Espaçamento superior para os ícones das redes sociais */
 }.social-icons {
-  margin-top: 10px;
+  margin-top: 10px;  /* Espaço acima dos ícones */
 }
 
-/* ícone redes sociais */
-
-.social-icons a {
-  color: #000;            /* cor inicial do ícone */
-  font-size: 24px;        /* tamanho do ícone */
-  margin-right: 10px;     /* espaçamento entre ícones */
-  text-decoration: none;
-  transition: color 0.3s ease;
-  margin-left: 10px;
+/* Reduz a margem externa da página em telas pequenas */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 10px;
+  }
 }
 
-.social-icons a:hover {
-  color: #555;           
-}
-
-/* back to top */
-
+/* Rodapé da página */
 footer {
-  text-align: center;
-  padding: 30px 0;
-  background-color: #ffffff;
+  text-align: center;  /* Centraliza o texto do rodapé */
+  padding: 30px 0;   /* Espaçamento interno acima e abaixo */
+  background-color: #ffffff;  /* Cor de fundo branca */
 }
 
+  /* Estilo para o link "voltar ao topo" */
 .back-to-top {
-  color: #999;
-  text-decoration: none;
+  color: #999;   /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado do link */
 }
